@@ -8,7 +8,9 @@ class RestaurantsController < ApplicationController
 
   def show          # GET /restaurants/:id
     @reviews = Review.where(restaurant_id: @restaurant.id)
-
+    @review = Review.new
+puts "?????????"
+puts @review
   end
 
   def new           # GET /restaurants/new

@@ -2,9 +2,6 @@ class ReviewsController < ApplicationController
   def index         # GET /reviews
   end
 
-  def show          # GET /reviews/:id
-  end
-
   def new           # GET /reviews/new
     @restaurant = Restaurant.find(params[:restaurant_id])
     @review = Review.new
@@ -18,15 +15,6 @@ class ReviewsController < ApplicationController
     else
       render :new
     end
-  end
-
-  def edit          # GET /reviews/:id/edit
-  end
-
-  def update        # PATCH /reviews/:id
-  end
-
-  def destroy       # DELETE /reviews/:id
   end
 
   def review_params

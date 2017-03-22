@@ -1,5 +1,6 @@
-<%= form_for(@restaurant) do |f| %>
-<div class="container">
+<div class="row">
+<%= simple_form_for(@restaurant) do |f| %>
+
   <%= f.label :name %>
   <%= f.text_field :name %>
 
@@ -13,5 +14,6 @@
   <%= f.text_field :category %>
 
   <%= f.submit :class => 'btn btn-primary' %>
-</div>
+
 <% end %>
+</div>
